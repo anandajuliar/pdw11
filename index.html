@@ -3,32 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pendaftaran Peminatan</title>
   <link rel="stylesheet" href="style.css" />
-  <title>DOM Javascript</title>
 </head>
 <body>
   <div class="container">
-    <div class="header">
-      <h3>Pendaftaran Peminatan</h3>
-    </div>
-    <form action="">
-      <label for="nama">Nama</label><br />
-      <input type="text" placeholder="Nama anda" id="nama" /><br /><br />
-      <label for="nim">NIM</label><br />
-      <input type="text" placeholder="NIM anda" id="nim" /><br /><br />
-      <p>Peminatan pada bidang:</p>
+    <h2>Pendaftaran Peminatan</h2>
 
-      <label for="programming">Programming</label><br />
-      <input type="radio" name="peminatan" id="programming" value="Programming" />
-      <label for="desain">Desain</label><br />
-      <input type="radio" name="peminatan" id="desain" value="Desain" />
-      <label for="jaringan">Jaringan</label><br />
-      <input type="radio" name="peminatan" id="jaringan" value="Jaringan" />
-      <label for="data">Data</label><br /><br />
-      <input type="radio" name="peminatan" id="data" value="Data" />
-      <label for="alamat">Alamat</label><br />
-      <textarea placeholder="Tulis alamat mu di sini" name="alamat" id="alamat" cols="30" rows="5"></textarea><br /><br />
-      <button type="submit" onclick="kirimData()">Kirim</button>
+    <form onsubmit="kirimData(); return false;">
+      <label for="nama">Nama</label>
+      <input type="text" id="nama" placeholder="Nama anda" required>
+
+      <label for="nim">NIM</label>
+      <input type="text" id="nim" placeholder="NIM anda" required>
+
+      <p>Peminatan pada bidang:</p>
+      <div class="radio-group">
+        <label><input type="radio" name="peminatan" value="Programming" required> Programming</label>
+        <label><input type="radio" name="peminatan" value="Desain"> Desain</label>
+        <label><input type="radio" name="peminatan" value="Jaringan"> Jaringan</label>
+        <label><input type="radio" name="peminatan" value="Data"> Data</label>
+      </div>
+
+      <label for="alamat">Alamat</label>
+      <textarea id="alamat" placeholder="Tulis alamatmu di sini" required></textarea>
+
+      <button type="submit">Kirim</button>
     </form>
   </div>
 
