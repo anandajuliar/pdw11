@@ -1,13 +1,17 @@
 function kirimData() {
-  var name = document.getElementById("nama").value;
-  var nim = document.getElementById("nim").value;
-  var peminatan = document.querySelector("input[name=peminatan]:checked").value;
-  var alamat = document.getElementById("alamat").value;
+  const nama = document.getElementById("nama").value;
+  const nim = document.getElementById("nim").value;
+  const peminatan = document.querySelector('input[name="peminatan"]:checked').value;
+  const alamat = document.getElementById("alamat").value;
+  const angkatan = document.getElementById("angkatan").value;
+  const tanggal = document.getElementById("tanggal").value;
 
   alert(
-    "Nama : " + name +
+    "Nama : " + nama +
     "\nNIM : " + nim +
     "\nPeminatan : " + peminatan +
-    "\nAlamat : " + alamat
+    "\nAlamat : " + alamat +
+    "\nAngkatan : " + angkatan +
+    "\nTanggal : " + tanggal
   );
 }
